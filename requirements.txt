@@ -6,3 +6,4 @@ vibora
 japronto
 sanic
 mako
+aiohttp

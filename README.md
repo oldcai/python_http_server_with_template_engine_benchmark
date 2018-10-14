@@ -25,6 +25,7 @@ Note: Values in table are Requests/sec
 | **vibora**    | 7727.74   | 8398.26   | -          | -          | 8275.23
 | **starlette** | 5157.15
 | **sanic**     | 4174.97   | 913.88    | -          | 3104.93    | 825.61
+| **aiohttp**   | 3414.13
 | **quart**     | 757.58
 
 
@@ -36,6 +37,7 @@ Note: Values in table are Requests/sec
 - [vibora](https://github.com/vibora-io/vibora)
 - [starlette](https://github.com/encode/starlette)
 - [sanic](https://github.com/huge-success/sanic)
+- [aiohttp](https://github.com/aio-libs/aiohttp)
 - [quart](https://gitlab.com/pgjones/quart)
 
 ##### Most Stars First Order
@@ -43,11 +45,14 @@ Note: Values in table are Requests/sec
 - sanic
 - japronto
 - vibora
+- aiohttp
 - quart
 - starlette
 
 
-#### Template Engines (fastest first)
+#### Template Engines
+
+##### Fastest First Order
 
 - tenjin ([homepage](http://www.kuwata-lab.com/tenjin/) or on [github](https://github.com/kwatch/tenjin/tree/python))
 - [jinja2](https://github.com/pallets/jinja)
