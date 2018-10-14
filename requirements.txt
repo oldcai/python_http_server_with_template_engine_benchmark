@@ -1,0 +1,8 @@
+uvloop==0.8.1
+tenjin
+jinja2
+starlette
+vibora
+japronto
+sanic
+mako
