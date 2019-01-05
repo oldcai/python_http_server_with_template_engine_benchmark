@@ -28,6 +28,6 @@ Running 10s test @ http://0.0.0.0:8000
     Latency     3.23ms    1.72ms  42.41ms   95.65%
     Req/Sec     7.87k     0.92k   10.10k    73.00%
   313753 requests in 10.03s, 49.67MB read
-Requests/sec:  31273.63
+Requests/sec:  32828.40
 Transfer/sec:      4.95MB
 """

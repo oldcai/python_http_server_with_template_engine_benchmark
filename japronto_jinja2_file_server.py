@@ -1,24 +1,19 @@
+import japronto_jinja2
+import jinja2
 from japronto import Application
-from jinja2 import Template
-template = Template("""
- <HTML>
- <HEAD><TITLE>{{ title }}</TITLE></HEAD>
- <BODY>
-{{ post_content }}
- </BODY>
- </HTML>""")
 
 
+@japronto_jinja2.template('tmpl.jinja2')
 async def hello(request):
     context = {
         'title': 'Blog Post Test',
         'post_content': "Foo\nBar\nBaz",
     }
-    t = template.render(context)
-    return request.Response(text=t)
+    return context
 
 
 app = Application()
+japronto_jinja2.setup(app, loader=jinja2.FileSystemLoader('views/'))
 app.router.add_route('/', hello)
 app.run(worker_num=1, port=8000)
 
@@ -27,9 +22,9 @@ app.run(worker_num=1, port=8000)
 Running 10s test @ http://0.0.0.0:8000
   4 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency     3.68ms    2.72ms  71.54ms   97.29%
-    Req/Sec     7.07k     0.88k    9.61k    81.25%
-  282074 requests in 10.03s, 45.73MB read
-Requests/sec:  30391.32
-Transfer/sec:      4.56MB
+    Latency     7.03ms    1.05ms  14.31ms   80.37%
+    Req/Sec     3.56k   176.54     4.04k    67.25%
+  142164 requests in 10.03s, 22.64MB read
+Requests/sec:  14173.93
+Transfer/sec:      2.26MB
 """
