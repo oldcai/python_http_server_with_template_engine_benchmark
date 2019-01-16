@@ -27,16 +27,16 @@ async def homepage(request):
     return html(t)
 
 
-app.run(debug=True, port=8000)
+app.run(port=8000)
 
 """
 ~ » wrk -c 100 -t 4 http://localhost:8000 -d 10
-Running 10s test @ http://localhost:8000
+Running 10s test @ http://0.0.0.0:8000
   4 threads and 100 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   122.78ms   52.24ms 434.83ms   83.29%
-    Req/Sec   218.27     72.39   475.00     75.91%
-  8278 requests in 10.03s, 1.64MB read
-Requests/sec:    825.61
-Transfer/sec:    167.70KB
+    Latency    21.28ms    5.12ms  56.02ms   75.93%
+    Req/Sec     1.18k   146.43     1.53k    64.39%
+  47082 requests in 10.05s, 9.34MB read
+Requests/sec:   4682.98
+Transfer/sec:      0.93MB
 """
